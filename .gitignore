@@ -1,1 +1,10 @@
 something.json
+env.py
+session.txt
+matches.json
+.vscode/
+__pycache__/
+other/
+things.txt
+session.json
+.idea/
