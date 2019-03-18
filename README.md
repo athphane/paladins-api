@@ -1,16 +1,31 @@
 # Paladins Telegram Bot
+
+This package can be used to get details of the game using the HiRez API.
+
+Only supports **Paladins**. (Since I only play that game)
+
+*Each file is named as what it does. Message construction is also done.*
+
+
+Right now each file is configured to accept 2-3 parameters.
+
+ - param 1 = chatID of the telegram chat
+ - param 2 = name of the player you want to get details of
+ - param 3 = name of the champion. (This one only applicable to send_champions_details.py)
+
+  
+
+
+### Things you need
 ---
-This package can be used to get details of the game using the HiRez API. \n
-Only supports Paladins. \n
-Each file is named as what it does. Message construction is also done.
 
-Right now each file is configured to accept 2-3 parameters. \n
-param 1 = chatID of the telegram chat \n
-param 2 = name of the player you want to get details of
+ - You will need your own HiRez Dev ID and Auth Key, which is easily obtainable from their [online form](https://fs12.formsite.com/HiRez/form48/secure_index.html).  
+ - You need your own bot on Telegram and it's API keys.
+ - Runs on Python 3. Not 2.7.
+ - You will need the a Python package called
+   '[telepot'](https://pypi.org/project/telepot/)
 
-You will need your own HiRez Dev ID and Auth Key, which is easily obtainable from 
-https://fs12.formsite.com/HiRez/form48/secure_index.html
 
-You need your own bot on telegram and it's API keys.
-
+---
+I use Node-RED to make this work. It works for me and my friends extremely well. 
 Currently under active development
