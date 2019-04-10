@@ -84,12 +84,14 @@ if __name__ == '__main__':
         exit()
     else: 
         singleton = getMatches(player_arg)
+        ratio = (singleton['Damage'] / (singleton['Damage'] + singleton['Damage_Taken'])) * 100
 
         # Easy vals to get
         player =        'Player: '          + str(singleton['playerName'])      + '\n'
         champion =      'Champion: '        + str(singleton['Champion'])        + '\n'
         damage_delt =   'Damage delt: '     + str(singleton['Damage'])          + '\n'
         damage_taken =  'Damage taken: '    + str(singleton['Damage_Taken'])    + '\n' 
+        damage_ratio = 'Damage ratio: '     + str(round(ratio))                 + '\n'
         deaths =        'Deaths: '          + str(singleton['Deaths'])          + '\n' 
         healing =       'Healing: '         + str(singleton['Healing'])         + '\n' 
         killing_spree = 'Killing spree: '   + str(singleton['Killing_Spree'])   + '\n' 
@@ -99,5 +101,5 @@ if __name__ == '__main__':
         title = '*== Match Details ==* \n'
         loadout_details = getLoadoutDetails(singleton)
         match_items = getMatchItemDetails(singleton)
-        message = title + player + champion + queue + damage_delt + damage_taken + killing_spree + healing + win_status + '\n' + loadout_details + '\n' + match_items
+        message = title + player + champion + queue + damage_delt + damage_taken + damage_ratio + killing_spree + healing + win_status + '\n' + loadout_details + '\n' + match_items
         sendMessage(chat_id, message)
